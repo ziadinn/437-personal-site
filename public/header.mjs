@@ -1,11 +1,24 @@
-const headerTitle = "Ziadin";
 const routes = [
-  { title: "Home Page", path: "./index.html" },
-  { title: "Another Page", path: "./another-page.html" },
+  { headerTitle: "Ziadin", title: "Home Page", path: "./index.html" },
+  {
+    headerTitle: "Another Page",
+    title: "Another Page",
+    path: "./another-page.html",
+  },
 ];
+
+let headerTitle = "Ziadin";
+for (const route of routes) {
+  if (route.path === `.${window.location.pathname}`) {
+    headerTitle = route.headerTitle;
+    break;
+  }
+}
+
 const navPaths = routes
   .map((route) => `<a href="${route.path}">${route.title}</a>`)
   .join("");
+
 const initialHeaderContent = `
   <div class="header-content">
     <h1>${headerTitle}</h1>
