@@ -103,7 +103,7 @@ header h1 {
 }
 
 header nav {
-  display: none;
+  display: flex;
   gap: var(--spacing-md);
   align-items: baseline;
 }
@@ -190,7 +190,7 @@ li {
 }
 
 .header-content button {
-  display: flex;
+  display: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -204,7 +204,15 @@ li {
     gap: var(--spacing-md);
     align-items: flex-start;
   }
-  
+
+  header nav {
+    display: none;
+  }
+
+  .header-content button {
+    display: flex;
+  }
+
   dl {
     grid-template-columns: 1fr;
   }
