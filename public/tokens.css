@@ -9,6 +9,16 @@
   --color-link: #3498db;
   --color-shadow: rgba(0, 0, 0, 0.1);
 
+  /* Dark mode colors */
+  --color-primary-dark: #1a252f;
+  --color-secondary-dark: #c0392b;
+  --color-accent-dark: #f39c12;
+  --color-text-dark: #ecf0f1;
+  --color-text-inverted-dark: #2c3e50;
+  --color-background-dark: #2c3e50;
+  --color-link-dark: #3498db;
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -22,4 +32,15 @@
   /* Font stuff */
   --font-family-main: "Special Gothic Expanded One", sans-serif;
   --line-height-base: 1.5;
+}
+
+body.dark-mode {
+  --color-primary: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-inverted: var(--color-text-inverted-dark);
+  --color-background: var(--color-background-dark);
+  --color-link: var(--color-link-dark);
+  --color-shadow: var(--color-shadow-dark);
 }

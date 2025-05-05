@@ -22,6 +22,10 @@ const navPaths = routes
 const initialHeaderContent = `
   <div class="header-content">
     <h1>${headerTitle}</h1>
+    <label class="dark-mode-switch">
+      <input type="checkbox" id="dark-mode-toggle" autocomplete="off" />
+      Dark mode
+    </label>
     <button id="burger-button">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256">
         <path
@@ -40,6 +44,27 @@ const body = document.querySelector("body");
 const header = document.createElement("header");
 header.innerHTML = initialHeaderContent;
 body.prepend(header);
+
+// Dark mode functionality
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+// Load dark mode preference from localStorage
+const isDarkMode = localStorage.getItem("darkMode") === "true";
+if (isDarkMode) {
+  document.body.classList.add("dark-mode");
+  darkModeToggle.checked = true;
+}
+
+// Add dark mode toggle event listener
+darkModeToggle.addEventListener("change", (event) => {
+  const isDark = event.target.checked;
+  if (isDark) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+  localStorage.setItem("darkMode", isDark);
+});
 
 const burgerButton = document.querySelector("#burger-button");
 burgerButton.addEventListener("click", () => {
