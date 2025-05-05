@@ -1,23 +1,30 @@
 :root {
   /* Colors */
-  --color-primary: #2c3e50;
-  --color-secondary: #e74c3c;
-  --color-accent: #f1c40f;
-  --color-text: #2c3e50;
+  /* Light mode */
+  --color-primary: #1a365d;
+  --color-secondary: #c53030;
+  --color-accent: #d69e2e;
+  --color-text: #1a202c;
   --color-text-inverted: #ffffff;
-  --color-background: #ecf0f1;
-  --color-link: #3498db;
+  --color-background: #f7fafc;
+  --color-background-section: #ffffff;
+  --color-border: #e2e8f0;
+  --color-link: #2b6cb0;
   --color-shadow: rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 4px var(--color-shadow);
 
   /* Dark mode colors */
-  --color-primary-dark: #1a252f;
-  --color-secondary-dark: #c0392b;
-  --color-accent-dark: #f39c12;
-  --color-text-dark: #ecf0f1;
-  --color-text-inverted-dark: #2c3e50;
-  --color-background-dark: #2c3e50;
-  --color-link-dark: #3498db;
+  --color-primary-dark: #2baeff;
+  --color-secondary-dark: #fc8181;
+  --color-accent-dark: #fbd38d;
+  --color-text-dark: #f7fafc;
+  --color-text-inverted-dark: #1a202c;
+  --color-background-dark: #1a202c;
+  --color-background-section-dark: #2d3748;
+  --color-border-dark: #4a5568;
+  --color-link-dark: #63b3ed;
   --color-shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-dark: none;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -28,6 +35,7 @@
   /* Border */
   --border-radius-sm: 0.25rem;
   --border-radius-md: 0.5rem;
+  --border-width: 1px;
 
   /* Font stuff */
   --font-family-main: "Special Gothic Expanded One", sans-serif;
@@ -41,6 +49,9 @@ body.dark-mode {
   --color-text: var(--color-text-dark);
   --color-text-inverted: var(--color-text-inverted-dark);
   --color-background: var(--color-background-dark);
+  --color-background-section: var(--color-background-section-dark);
+  --color-border: var(--color-border-dark);
   --color-link: var(--color-link-dark);
   --color-shadow: var(--color-shadow-dark);
+  --shadow: var(--shadow-dark);
 }

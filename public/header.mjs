@@ -45,17 +45,13 @@ const header = document.createElement("header");
 header.innerHTML = initialHeaderContent;
 body.prepend(header);
 
-// Dark mode functionality
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
-
-// Load dark mode preference from localStorage
 const isDarkMode = localStorage.getItem("darkMode") === "true";
 if (isDarkMode) {
   document.body.classList.add("dark-mode");
   darkModeToggle.checked = true;
 }
 
-// Add dark mode toggle event listener
 darkModeToggle.addEventListener("change", (event) => {
   const isDark = event.target.checked;
   if (isDark) {

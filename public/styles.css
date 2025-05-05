@@ -93,7 +93,6 @@ header {
   border-radius: var(--border-radius-md);
   margin-bottom: var(--spacing-lg);
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -104,6 +103,7 @@ header h1 {
 
 header nav {
   display: flex;
+  margin-left: auto;
   gap: var(--spacing-md);
   align-items: baseline;
 }
@@ -115,11 +115,6 @@ header nav a {
   border-radius: var(--border-radius-sm);
 }
 
-header nav a:hover {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-}
-
 main {
   display: grid;
   gap: var(--spacing-lg);
@@ -128,10 +123,10 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: var(--color-background-section);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-md);
-  box-shadow: 0 2px 4px var(--color-shadow);
+  border: var(--border-width) solid var(--color-border);
   margin-bottom: var(--spacing-lg);
 }
 
@@ -154,6 +149,7 @@ dl {
   background-color: var(--color-background);
   padding: var(--spacing-md);
   border-radius: var(--border-radius-md);
+  border: var(--border-width) solid var(--color-border);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-sm);
@@ -173,7 +169,9 @@ li {
   padding: var(--spacing-sm);
   margin: var(--spacing-xs) 0;
   background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
   border-radius: var(--border-radius-sm);
+  color: var(--color-text);
 }
 
 .profile-picture {
@@ -185,6 +183,7 @@ li {
 
 .header-content {
   display: flex;
+  flex-basis: 50%;
   align-items: center;
   align-self: stretch;
 }
@@ -238,7 +237,6 @@ li {
   transform: translateX(20px);
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 48rem) {
   header {
     flex-direction: column;
@@ -248,6 +246,7 @@ li {
 
   header nav {
     display: none;
+    margin-left: revert;
   }
 
   .header-content button {
@@ -257,4 +256,12 @@ li {
   dl {
     grid-template-columns: 1fr;
   }
+}
+
+body.dark-mode section {
+  box-shadow: none;
+}
+
+p {
+  color: var(--color-text);
 }
