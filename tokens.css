@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --color-primary: #2c3e50;
+  --color-secondary: #e74c3c;
+  --color-accent: #f1c40f;
+  --color-text: #2c3e50;
+  --color-text-inverted: #ffffff;
+  --color-background: #ecf0f1;
+  --color-link: #3498db;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 8px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+
+  /* Border */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+
+  /* Font stuff */
+  --font-family-main: "Special Gothic Expanded One", sans-serif;
+  --line-height-base: 1.5;
+}
