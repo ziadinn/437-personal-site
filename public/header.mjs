@@ -47,3 +47,13 @@ burgerButton.addEventListener("click", () => {
   isVisibleNavPaths = !isVisibleNavPaths;
   nav.style.display = isVisibleNavPaths ? "flex" : "none";
 });
+
+body.addEventListener("click", (event) => {
+  const header = document.querySelector("header");
+  const clickedInsideHeader = header.contains(event.target);
+  if (isVisibleNavPaths && !clickedInsideHeader) {
+    const nav = document.querySelector("header nav");
+    isVisibleNavPaths = false;
+    nav.style.display = "none";
+  }
+});
