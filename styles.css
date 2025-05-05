@@ -123,7 +123,7 @@ header nav a:hover {
 main {
   display: grid;
   gap: var(--spacing-lg);
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
 }
 
@@ -177,14 +177,14 @@ li {
 }
 
 .profile-picture {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   border-radius: 50%;
   overflow: hidden;
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   header {
     flex-direction: column;
     gap: var(--spacing-md);

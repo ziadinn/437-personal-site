@@ -10,14 +10,14 @@
   --color-shadow: rgba(0, 0, 0, 0.1);
 
   /* Spacing */
-  --spacing-xs: 5px;
-  --spacing-sm: 8px;
-  --spacing-md: 15px;
-  --spacing-lg: 20px;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
 
   /* Border */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
 
   /* Font stuff */
   --font-family-main: "Special Gothic Expanded One", sans-serif;
