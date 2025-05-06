@@ -9,8 +9,9 @@
 <body>
     <header>
         <h1>Stupid Shopping Site</h1>
-        <div class="searchbar">
-            <input placeholder="Search our stupid products" />
+        <div class="searchbar" role="search">
+            <label for="searchInput" class="visually-hidden">Search our stupid products</label>
+            <input id="searchInput" type="text" placeholder="Search our stupid products" />
             <button>Search</button>
         </div>
     </header>
@@ -18,51 +19,22 @@
         <section>
             <h2>Filters</h2>
             <div class="filters">
-                <label>Min price ($)</label>
+                <label for="minPrice">Min price ($)</label>
                 <input id="minPrice" type="number" min="0"/>
-                <label>Max price ($)</label>
+                <label for="maxPrice">Max price ($)</label>
                 <input id="maxPrice" type="number" min="1" />
             </div>
         </section>
 
         <section class="product-list">
             <h2>Search results</h2>
-            <article>
-                <img src="https://placehold.co/200x200" alt="Shoes" />
-                <div class="product-details">
-                    <h3>Shoes</h3>
-                    <p>A cool shoe product</p>
-                    <p class="price">$100</p>
-                    <div><button class="buy-button">Add to cart</button> <span class="num-in-cart">2 in cart</span></div>
-                </div>
-            </article>
-            <article>
-                <img src="https://placehold.co/200x200" alt="Chips" />
-                <div class="product-details">
-                    <h3>Chips</h3>
-                    <p>Delicious.</p>
-                    <p class="price">$5</p>
-                    <div><button class="buy-button">Add to cart</button> <span class="num-in-cart">1 in cart</span></div>
-                </div>
-            </article>
-            <article>
-                <img src="https://placehold.co/200x200" alt="Cookies" />
-                <div class="product-details">
-                    <h3>Cookies</h3>
-                    <p>Delicious.</p>
-                    <p class="price">$3</p>
-                    <div><button class="buy-button">Add to cart</button></div>
-                </div>
-            </article>
+            <!-- Static product cards removed; they will be rendered dynamically by JavaScript -->
         </section>
 
         <section class="cart">
             <h2>Cart</h2>
             <div class="cart-items">
-                <p>Shoes x2</p>
-                <button class="remove-button">Remove</button>
-                <p>Cookies x1</p>
-                <button class="remove-button">Remove</button>
+                <!-- Cart items will be rendered dynamically by JavaScript -->
             </div>
             <button class="buy-button">Check out</button>
         </section>
